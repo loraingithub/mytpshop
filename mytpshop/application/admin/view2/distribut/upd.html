@@ -1,0 +1,68 @@
+<include file="public/layout" />
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="javascript:history.back();" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>分销佣金 - 编辑分销佣金</h3>
+                <h5>分销佣金信息</h5>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" id="adminHandle" action="{:U('Distribut/message')}" method="post">
+        <!-- <input type="hidden" name="act" value="{$act}"> -->
+        <!-- <input type="hidden" name="user_id" value='{$info.user_id}'> -->
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label for="id"><em>*</em>代理佣金ID</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="id" value="{$data.id}" id="dlyj_id" class="input-txt" readonly="readonly">
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="email"><em>*</em>一级代理费</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="first" value="{$data.first}" id="dlyj_first" class="input-txt">
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="password"><em>*</em>二级代理费</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="second" value="{$data.second}" id="dlyj_second" class="input-txt">
+                </dd>
+            </dl>
+            <div class="bot">
+            <input type="submit" name="" value='提交'>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    // 判断输入框是否为空
+    function adsubmit(){
+        if($('input[name=user_name]').val() == ''){
+            layer.msg('代理佣金ID不能为空！', {icon: 2,time: 1000});   //alert('少年，用户名不能为空！');
+            return false;
+        }
+        if($('input[name=email]').val() == ''){
+            layer.msg('一级代理费不能为空！', {icon: 2,time: 1000});//alert('少年，邮箱不能为空！');
+            return false;
+        }
+        if($('input[name=password]').val() == ''){
+            layer.msg('二级代理费不能为空！', {icon: 2,time: 1000});//alert('少年，密码不能为空！');
+            return false;
+        }
+        $('#adminHandle').submit();
+    }
+</script>
+</body>
+</html>

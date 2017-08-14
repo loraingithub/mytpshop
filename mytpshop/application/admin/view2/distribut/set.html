@@ -1,0 +1,57 @@
+<include file="public/min-header" />
+<div class="wrapper">
+    <include file="public/breadcrumb"/>
+	<section class="content">
+       <div class="row">
+       		<div class="col-xs-12">
+	       		<div class="box">             
+	             <div class="box-body">	               
+	           		<div class="row">
+	            	<div class="col-sm-12">
+		              <table id="list-table" class="table table-bordered table-striped dataTable">
+		                 <thead>
+		                   <tr role="row">
+			                   <th>代理佣金ID</th>
+			                   <th>一级代理佣金</th>
+			                   <th>二级代理佣金</th>			    
+			                   <th>修改</th>
+		                   </tr>
+		                 </thead>
+						<tbody>
+						  <foreach name="data" item="vo" key="k" >
+						  	<tr role="row" align="center">
+		                     <td>{$vo.id}</td>
+		                     <td>{$vo.first}</td>
+		                     <td>{$vo.second}</td>
+		                     <td>
+		                     <!--  <a class="btn btn-primary" href="{:U('Admin/admin_info',array('admin_id'=>$vo['admin_id']))}"><i class="fa fa-pencil"></i></a>
+		                      <if condition="$vo['admin_id'] gt 1">
+		                      <a class="btn btn-danger" href="javascript:void(0)" data-url="{:U('Admin/adminHandle')}" data-id="{$vo.admin_id}" onclick="delfun(this)"><i class="fa fa-trash-o"></i></a> -->
+
+		                      <!-- <a class="btn btn-primary" href="{:U('Distribut/distributor_edit',array('user_id'=>$vo['user_id']))}"><i class="fa fa-pencil"></i></a> -->
+		                      <a class="btn btn-primary" href="{:U('Distribut/upd',array('id'=>$vo['id']))}"><i class="fa fa-pencil"></i></a>
+		                      <!-- <if condition="$vo['admin_id'] gt 1">
+		                      <a class="btn btn-danger" href="javascript:void(0)" data-url="{:U('Admin/adminHandle')}" data-id="{$vo.admin_id}" onclick="delfun(this)"><i class="fa fa-trash-o"></i></a> 
+							  </if> -->
+							</td>
+		                   </tr>
+		                  </foreach>
+		                   </tbody>
+		                 <tfoot>		                          
+		                 </tfoot>		                 		           </table>	
+
+		               
+	               </div>
+	          </div>
+	          <!-- 分页位置 -->
+            <div class="row">
+              	<center>{$show}</center> 
+            </div> 
+	         </div>
+	        </div>
+       	</div>
+       </div>
+   </section>
+</div> 
+</body>
+</html>

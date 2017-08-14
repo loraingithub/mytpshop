@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>分销商品管理</title>
+</head>
+<body>
+    <table width="1300" border="1" cellspacing="0" cellpadding="0">
+      <tr>
+          <th>商品id</th>
+          <th>商品名称</th>
+          <th>商品价格</th>
+          <th>商品描述</th>
+          <th>操&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作</th>
+      </tr>
+      <foreach name="info" item="v" key="k" >
+        <tr>
+            <td align="center">{$v['goods_id']}</td>
+            <td align="center">{$v['goods_name']}</td>
+            <td align="center">{$v['shop_price']}元</td>
+            <td align="center">{$v['goods_remark']}</td>
+            <td align="center"><a href="admin/Distribut/goods_edit/id/{$v['goods_id']}">修改</a>| <a href="">删除</a></td>
+        </tr>      
+      </foreach>
+    </table>
+</body>
+</html>

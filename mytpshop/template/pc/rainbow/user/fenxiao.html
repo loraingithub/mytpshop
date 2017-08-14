@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的账户-{$tpshop_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$tpshop_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$tpshop_config['shop_info_store_desc']}"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/tpshop.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/css/myaccount.css"/>
+    <link rel="shortcut  icon" type="image/x-icon" href="__STATIC__/images/favicon.ico" media="screen"/>
+    <script src="__STATIC__/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bg-f5">
+<include file="user/header"/>
+<div class="home-index-middle">
+    <div class="w1224">
+        <div class="g-crumbs">
+            <a href="{:U('Home/User/index')}">我的商城</a>
+            <i class="litt-xyb"></i>
+            <span>我的佣金</span>
+        </div>
+        <div class="home-main">
+            <include file="user/menu"/>
+            <div class="ri-menu fr">
+                <div class="menumain p">
+                    <div class="goodpiece">
+                        <h1>我的佣金</h1>
+                    </div>
+                    <div class="orderbook-list returnmagament">
+                        <div class="time-sala timsearch p">
+                            <ul>
+                                <li class="red"><a href="javascript:void(0);">全部记录</a></li>
+                            </ul>
+                            <form action="" method="POST" id="searchfrom">
+                                <div class="search-ss-lit" class="sea_ol">
+                                    <input type="text" value="" name="search_key" placeholder="关键字">
+                                    <i class="litt-sexx" onclick=" $('#searchfrom').submit()"></i>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="he"></div>
+                        <div class="returngoods">
+                            <div class="book-tit">
+                                <ul>
+                                    <li class="sx2">购买者用户名</include></li>
+                                    <li class="sx3">获取佣金</li>
+                                    <li class="sx5">订单ID</li>
+                                    <li class="sx6">商品数量</li>
+                                    <li class="sx1">时间</li>
+                                    <li class="sx4 s5clic">备注</li>
+                                   <!-- <li class="sx5">原因</li>
+                                    <li class="sx6 s5clic">状态</li>
+                                    <li class="sx7">操作</li>-->
+                                </ul>
+                            </div>
+                            <if condition="!empty($data)">
+                                <div class="book-tit book_content p">
+                                    <volist name="data" id="v" >
+                                        <ul>
+                                            <li class="sx2">{$v.nickname}</li>
+                                            <li class="sx3">{$v.money}</li>
+                                            <li class="sx5">{$v.order_id}</li>
+                                            <li class="sx6">{$v.goods_num}</li>
+                                            <li class="sx1">{$v.create_time|date="Y-m-d H:i:s",###}</li>
+                                            <li class="sx4">{$v.beizhu}</li>
+                                        </ul>
+                                    </volist>
+                                </div>
+                                <else/>
+                                <div class="car-none-pl">
+                                    <i class="account-acco1"></i>---您暂时还没有分佣信息---
+                                </div>
+                            </if>
+                            {$pageinfo}
+                            <!--分页位置-->
+                            {$page}
+                            <!--<div class="operating fixed">
+                                <div class="fn_page clearfix" style="margin-top:10px">
+                                    {$page}
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-s-->
+<div class="footer p">
+    <include file="public/footer_index"/>
+</div>
+<!--footer-e-->
+<script type="text/javascript">
+    $(function () {
+        //退货记录和申请退货切换
+        $('.time-sala ul li').click(function () {
+            var twi = $('.time-sala ul li').index(this);
+            $('.returngoods').eq(twi).show().siblings('.returngoods').hide();
+            $(this).addClass('red').siblings().removeClass('red');
+        })
+        //申请时间和状态切换
+//			$('.s5clic').click(function () {
+//				var ge = $('.s5clic').index(this);
+//				$('.hid-derei').eq(ge).slideToggle(400).siblings('.hid-derei').hide();
+//				$(this).animate({opacity: "1"}, 200, function () {
+//					$(this).toggleClass('sxbb').siblings('.s5clic').removeClass('sxbb');
+//				})
+//			})
+    })
+</script>
+</body>
+
+
+
+
+</html>

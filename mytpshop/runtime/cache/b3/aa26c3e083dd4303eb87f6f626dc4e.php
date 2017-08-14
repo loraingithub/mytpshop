@@ -1,0 +1,3 @@
+<?php
+//000000000000a:18:{s:8:"site_url";s:21:"http://www.tp-shop.cn";s:9:"record_no";s:24:"这里是网站备案号";s:10:"store_name";s:27:"捷付通科技有限公司";s:10:"store_logo";s:26:"/public/images/newLogo.png";s:11:"store_title";s:39:"捷付通科技有限公司网站标题";s:10:"store_desc";s:91:"0投资成为会员 线上线下同步推广 无风险 发展不伤人脉，低成本分销";s:13:"store_keyword";s:91:"开源商城 B2C商城  B2B2C商城  三级分销  多用户商城  免费商城  微商城";s:7:"contact";s:0:"";s:5:"phone";s:8:"56293573";s:7:"address";s:9:"金水区";s:2:"qq";s:19:"1111111111111111111";s:3:"qq2";s:11:"22222222222";s:3:"qq3";s:10:"3333333333";s:6:"mobile";s:8:"56293573";s:8:"province";s:5:"21387";s:4:"city";s:5:"21388";s:8:"district";s:1:"0";s:11:"form_submit";s:2:"ok";}
+?>

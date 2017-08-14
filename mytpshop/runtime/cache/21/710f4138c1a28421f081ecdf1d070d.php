@@ -1,0 +1,3 @@
+<?php
+//000000086400a:4:{i:0;a:3:{s:8:"goods_id";i:159;s:10:"goods_name";s:4:"1111";s:10:"shop_price";s:6:"111.00";}i:1;a:3:{s:8:"goods_id";i:147;s:10:"goods_name";s:69:"购买该商品成为代理（购买一次即可，多够不累加）";s:10:"shop_price";s:8:"10000.00";}i:2;a:3:{s:8:"goods_id";i:144;s:10:"goods_name";s:12:"测试商品";s:10:"shop_price";s:6:"200.00";}i:3;a:3:{s:8:"goods_id";i:1;s:10:"goods_name";s:6:"会员";s:10:"shop_price";s:7:"2000.00";}}
+?>
